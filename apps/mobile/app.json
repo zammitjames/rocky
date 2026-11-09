@@ -1,0 +1,151 @@
+{
+  "expo": {
+    "name": "Rocky",
+    "slug": "rocky",
+    "scheme": "rocky",
+    "version": "1.0.12",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#FCFCFC",
+          "dark": {
+            "backgroundColor": "#141414"
+          }
+        }
+      ],
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-audio",
+        {
+          "enableBackgroundPlayback": false,
+          "microphonePermission": "Rocky uses the microphone for voice calls with your bots."
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "speechRecognitionPermission": "Rocky turns your speech into messages during voice calls.",
+          "microphonePermission": "Rocky uses the microphone for voice calls with your bots."
+        }
+      ],
+      "expo-localization",
+      "@react-native-vector-icons/ionicons",
+      "@react-native-vector-icons/material-design-icons",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Rocky uses your photo library so you can attach images to a bot message.",
+          "cameraPermission": "Rocky uses the camera so you can attach photos to a bot message.",
+          "microphonePermission": "Rocky uses the microphone for voice calls with your bots."
+        }
+      ],
+      "./plugins/with-share-extension",
+      [
+        "expo-sharing",
+        {
+          "ios": {
+            "enabled": true,
+            "appGroupId": "group.dev.rocky.app",
+            "activationRule": {
+              "supportsText": true,
+              "supportsWebUrlWithMaxCount": 1,
+              "supportsImageWithMaxCount": 10,
+              "supportsFileWithMaxCount": 10
+            }
+          },
+          "android": {
+            "enabled": true,
+            "singleShareMimeTypes": [
+              "text/*",
+              "image/*",
+              "audio/*",
+              "video/mp4",
+              "application/pdf",
+              "application/json",
+              "application/zip"
+            ],
+            "multipleShareMimeTypes": [
+              "image/*",
+              "audio/*",
+              "video/mp4",
+              "application/pdf",
+              "application/json",
+              "application/zip"
+            ]
+          }
+        }
+      ],
+      "./plugins/with-worklets-headers",
+      "./plugins/with-scene-lifecycle",
+      "./plugins/with-lan-cleartext",
+      "./plugins/with-android-no-gwp-asan",
+      "./plugins/with-agent-notifications",
+      "./plugins/with-android-r8",
+      "./plugins/with-app-intents"
+    ],
+    "locales": {
+      "es": "./locales/es.json",
+      "pl": "./locales/pl.json"
+    },
+    "ios": {
+      "bundleIdentifier": "dev.rocky.app",
+      "buildNumber": "1",
+      "supportsTablet": true,
+      "icon": "../../packages/ui-tokens/assets/Rakazo.icon",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Rocky uses the camera so you can attach photos to a bot message.",
+        "NSPhotoLibraryUsageDescription": "Rocky uses your photo library so you can attach images to a bot message.",
+        "NSLocalNetworkUsageDescription": "Rocky connects to a self-hosted Rocky server on your local network.",
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        },
+        "UIBackgroundModes": ["voip", "audio", "remote-notification"],
+        "NSUserActivityTypes": ["INSendMessageIntent"]
+      },
+      "entitlements": {
+        "com.apple.developer.usernotifications.time-sensitive": true,
+        "com.apple.developer.usernotifications.communication": true
+      }
+    },
+    "android": {
+      "package": "dev.rocky.app",
+      "versionCode": 10,
+      "softwareKeyboardLayoutMode": "resize",
+      "icon": "./assets/icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "monochromeImage": "./assets/monochrome-icon.png",
+        "backgroundImage": "./assets/icon-background.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "router": {},
+      "supportsRTL": true
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "enabled": false
+    }
+  }
+}

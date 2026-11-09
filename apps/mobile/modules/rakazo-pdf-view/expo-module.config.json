@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["RakazoPdfViewModule"]
+  },
+  "android": {
+    "modules": ["dev.rocky.pdfview.RakazoPdfViewModule"]
+  }
+}

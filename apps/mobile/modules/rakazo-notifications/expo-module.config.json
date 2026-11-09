@@ -1,0 +1,10 @@
+{
+  "platforms": ["android", "apple"],
+  "android": {
+    "modules": ["dev.rocky.notifications.RakazoNotificationsModule"]
+  },
+  "apple": {
+    "modules": ["RakazoNotificationsModule"],
+    "appDelegateSubscribers": ["RakazoCallsSubscriber"]
+  }
+}

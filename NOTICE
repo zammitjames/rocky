@@ -1,0 +1,19 @@
+Rocky
+
+This product includes software developed by the Rakazo contributors.
+Source: https://github.com/elie222/rakazo
+Source revision: c800ad59f4e5ae996da103bbd9d3b92930402f13
+Licensed under the Apache License, Version 2.0; see LICENSE.
+Original copyright and license notices are retained.
+
+Rocky modifications: product naming in web, desktop, mobile, authentication,
+notification, and runtime copy; desktop and mobile application metadata;
+disabled inherited update/publishing configuration; repository documentation.
+Modified source files carry a Rocky modification notice. JSON configuration
+changes are listed here because those formats do not support comments:
+package.json, apps/desktop/package.json, apps/mobile/app.json, and application
+locale/configuration JSON files containing product display names.
+
+Rocky is independently maintained and is not affiliated with or endorsed by
+the original project. Inherited artwork and internal compatibility identifiers
+remain in this initial source snapshot.
